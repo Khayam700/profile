@@ -5,5 +5,5 @@ const isProd = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   plugins: [react()],
-  // base: isProd ? '/profile/' : '/', // ⬅️ GitHub Pages فقط في الإنتاج
+  base: process.env.NODE_ENV === 'production' ? '/profile/' : '/'
 })
